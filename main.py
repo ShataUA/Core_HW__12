@@ -103,7 +103,7 @@ def search_by(address_book, command):
     raise ValueError
 
 
-# @input_error
+#@input_error
 # def days_to_birthday(address_book, command):
 #     """Days to birthday"""
 #     _, name = command.split()

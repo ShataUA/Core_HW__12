@@ -167,7 +167,7 @@ class AddressBook(UserDict):
                         result.append(record)
         return result
 
-    # def __getstate__(self):
+     # def __getstate__(self):
     #     return self.__dict__.copy()
     #
     # def __setstate__(self, state):
