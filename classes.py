@@ -11,11 +11,11 @@ class Field:
     def __str__(self):
         return str(self.value)
 
-    def __getstate__(self):
-        return self.__dict__.copy()
-
-    def __setstate__(self, state):
-        self.__dict__.update(state)
+    # def __getstate__(self):
+    #     return self.__dict__.copy()
+    #
+    # def __setstate__(self, state):
+    #     self.__dict__.update(state)
 
 
 
@@ -113,11 +113,11 @@ class Record:
     def __str__(self):
         return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}"
 
-    def __getstate__(self):
-        return self.__dict__.copy()
-
-    def __setstate__(self, state):
-        self.__dict__.update(state)
+    # def __getstate__(self):
+    #     return self.__dict__.copy()
+    #
+    # def __setstate__(self, state):
+    #     self.__dict__.update(state)
 
 
 class AddressBook(UserDict):
@@ -167,8 +167,8 @@ class AddressBook(UserDict):
                         result.append(record)
         return result
 
-    def __getstate__(self):
-        return self.__dict__.copy()
-
-    def __setstate__(self, state):
-        self.__dict__.update(state)
+    # def __getstate__(self):
+    #     return self.__dict__.copy()
+    #
+    # def __setstate__(self, state):
+    #     self.__dict__.update(state)

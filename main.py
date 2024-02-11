@@ -103,17 +103,17 @@ def search_by(address_book, command):
     raise ValueError
 
 
-@input_error
-def days_to_birthday(address_book, command):
-    """Days to birthday"""
-    _, name = command.split()
-    record = address_book.find(name)
-    if record:
-        # add_birthday =
-        return (f'Contact {name.capitalize()} birthday is {record.birthday}, '
-                f'there are {record.days_to_birthday()} days to next birthday' if record.days_to_birthday() else
-                f'Unknown birthday for contact {name.capitalize()}')
-    raise KeyError
+# @input_error
+# def days_to_birthday(address_book, command):
+#     """Days to birthday"""
+#     _, name = command.split()
+#     record = address_book.find(name)
+#     if record:
+#         # add_birthday =
+#         return (f'Contact {name.capitalize()} birthday is {record.birthday}, '
+#                 f'there are {record.days_to_birthday()} days to next birthday' if record.days_to_birthday() else
+#                 f'Unknown birthday for contact {name.capitalize()}')
+#     raise KeyError
 
 
 def main():
@@ -143,8 +143,8 @@ def main():
             print(delete_contact(address_book, command))
         elif command.startswith('search '):
             print(search_by(address_book, command))
-        elif command.startswith('birthday '):
-            print(days_to_birthday(address_book, command))
+        # elif command.startswith('birthday '):
+        #     print(days_to_birthday(address_book, command))
         else:
             print("Unknown command")
 
